@@ -100,19 +100,19 @@ export const PROJECTS: Project[] = [
 ];
 
 export const DAY1_AGENDA: AgendaItem[] = [
-    { time: '9:00 - 10:00 AM', activity: 'What Makes Up a Website?', details: ['Intro to React, TypeScript, Tailwind CSS', 'Explain the basic file structure', 'Showcase past AI-powered hackathon projects'], icon: <BookOpenIcon /> },
-    { time: '10:00 - 11:00 AM', activity: 'Getting Started on Gemini Build', details: ['Intro to Gemini Build as a coding environment', 'Build a very simple website', 'Demonstrate prompting AI to generate a simple React Web App'], icon: <SparklesIcon /> },
-    { time: '11:00 AM - 12:00 PM', activity: 'What Is a Request? + Gemini API', details: ['Simple explanation of API requests', 'Explore Google AI Studio Apps', 'Try out Gemini API with live examples'], icon: <ChatBubbleBottomCenterTextIcon /> },
-    { time: '12:00 PM - 1:00 PM', activity: 'Lunch Break + Team Discussion', details: ['Encourage idea sharing on potential web app projects', 'Focus on brainstorming, no coding yet'], icon: <TeamDiscussionIcon /> },
-    { time: '1:00 PM - 3:00 PM', activity: 'Hands-on: Build "2Empty"', details: ['Guide them step-by-step to recreate a Hackathon-winning project using AI prompts'], icon: <CodeBracketIcon /> },
-    { time: '3:00 PM - 4:00 PM', activity: 'Customization & Creativity', details: ['Add styling, image overlays, and personalization to their project'], icon: <CreativityIcon /> },
-    { time: '4:00 PM - 5:00 PM', activity: 'Deploy', details: ['Let students deploy their web app with Vercel'], icon: <DeployIcon /> },
+    { time: '10:00 AM - 11:00 AM', activity: 'What Makes Up a Website?', details: ['Intro to React, TypeScript, Tailwind CSS', 'Explain the basic file structure', 'Showcase past AI-powered hackathon projects'], icon: <BookOpenIcon /> },
+    { time: '11:00 AM - 12:00 NOON', activity: 'Getting Started on Gemini Build', details: ['Intro to Gemini Build as a coding environment', 'Build a very simple website', 'Demonstrate prompting AI to generate a simple React Web App'], icon: <SparklesIcon /> },
+    { time: '12:00 NOON - 1:00 PM', activity: 'What Is a Request? + Gemini API', details: ['Simple explanation of API requests', 'Explore Google AI Studio Apps', 'Try out Gemini API with live examples'], icon: <ChatBubbleBottomCenterTextIcon /> },
+    { time: '1:00 PM - 2:00 PM', activity: 'Lunch Break + Team Discussion', details: ['Encourage idea sharing on potential web app projects', 'Focus on brainstorming, no coding yet'], icon: <TeamDiscussionIcon /> },
+    { time: '2:00 PM - 4:00 PM', activity: 'Hands-on: Build "2Empty"', details: ['Guide them step-by-step to recreate a Hackathon-winning project using AI prompts'], icon: <CodeBracketIcon /> },
+    { time: '4:00 PM - 5:00 PM', activity: 'Customization & Creativity', details: ['Add styling, image overlays, and personalization to their project'], icon: <CreativityIcon /> },
+    { time: '5:00 PM - 6:00 PM', activity: 'Deploy', details: ['Let students deploy their web app with Vercel'], icon: <DeployIcon /> },
 ];
 
 export const DAY2_AGENDA: AgendaItem[] = [
-    { time: '9:00 - 10:00 AM', activity: 'Quick Revision & Warm-Up', details: ['Recap of React, Gemini API'], icon: <BookOpenIcon /> },
-    { time: '10:00 - 11:00 AM', activity: 'Mini Challenge Kickoff', details: ['Random topic draw in pairs', 'Brainstorm how they\'d build it'], icon: <MiniChallengeIcon /> },
-    { time: '11:00 AM - 3:00 PM', activity: 'Team Build Time', details: ['Guided hands-on project time', 'Mentors release hints gradually', 'Teach students how to think critically, debug, and ask effective AI prompts'], icon: <CodeBracketIcon /> },
-    { time: '3:00 PM - 4:00 PM', activity: 'Project Showcase', details: ['Each team presents what they built', 'Focus on creativity, problem-solving, and what they learned'], icon: <ProjectShowcaseIcon /> },
-    { time: '4:00 PM - 5:00 PM', activity: 'Reflection & What\'s Next', details: ['Reveal that their projects mirror real-world AI startup ideas', 'Intro to the Long Semester'], icon: <ReflectionIcon /> },
+    { time: '10:00 - 11:00 AM', activity: 'Quick Revision & Warm-Up', details: ['Recap of React, Gemini API'], icon: <BookOpenIcon /> },
+    { time: '11:00 - 12:00 NOON', activity: 'Mini Challenge Kickoff', details: ['Random topic draw in pairs', 'Brainstorm how they\'d build it'], icon: <MiniChallengeIcon /> },
+    { time: '12:00 NOON - 4:00 PM', activity: 'Team Build Time', details: ['Guided hands-on project time', 'Mentors release hints gradually', 'Teach students how to think critically, debug, and ask effective AI prompts'], icon: <CodeBracketIcon /> },
+    { time: '4:00 PM - 5:00 PM', activity: 'Project Showcase', details: ['Each team presents what they built', 'Focus on creativity, problem-solving, and what they learned'], icon: <ProjectShowcaseIcon /> },
+    { time: '5:00 PM - 6:00 PM', activity: 'Reflection & What\'s Next', details: ['Reveal that their projects mirror real-world AI startup ideas', 'Intro to the Long Semester'], icon: <ReflectionIcon /> },
 ];
