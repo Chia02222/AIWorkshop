@@ -60,7 +60,7 @@ const Header: React.FC<{ onAgendaClick: (e: React.MouseEvent<HTMLAnchorElement>)
         <a href="#agenda" onClick={onAgendaClick} className="text-white font-semibold py-2 px-4 rounded-lg hover:bg-slate-800/60 transition-colors">
           View Agenda
         </a>
-        <a href="#register" className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-500 transition-colors">
+        <a href="https://eventsize.com/event/AI-Workshop" className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-500 transition-colors">
           Enroll Now
         </a>
       </div>
