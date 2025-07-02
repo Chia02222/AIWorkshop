@@ -363,7 +363,7 @@ const DetailsAndRegistration: React.FC = () => {
 
                         <div className="mt-12 text-center">
                             <a
-                                href="#"
+                                href="https://eventsize.com/event/AI-Workshop"
                                 className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 px-16 rounded-lg transition-all shadow-lg hover:shadow-2xl shadow-indigo-500/40 transform hover:scale-105 text-lg"
                             >
                                 Enroll Now
