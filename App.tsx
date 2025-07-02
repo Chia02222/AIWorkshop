@@ -327,7 +327,7 @@ const DetailsAndRegistration: React.FC = () => {
                             <ClockIcon />
                             <div className="ml-4">
                                 <div className="font-semibold">Time</div>
-                                <div className="text-slate-300">9AM – 5PM daily</div>
+                                <div className="text-slate-300">10AM – 6PM daily</div>
                             </div>
                         </div>
                         <div className="flex items-center">
