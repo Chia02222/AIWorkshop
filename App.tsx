@@ -374,7 +374,7 @@ const DetailsAndRegistration: React.FC = () => {
                      <div className="mt-12 text-center text-slate-400">
                         <p className="flex items-center justify-center flex-wrap">
                             <EnvelopeIcon />
-                            <span className="ml-2">Have questions? Reach us at nest99nest@gmail.com or </span>
+                            <span className="ml-2">Have questions? Reach us at nestspace@nestspace.my or </span>
                             <PhoneIcon />
                             <span className="ml-2"> 012-5156757</span>
                         </p>
