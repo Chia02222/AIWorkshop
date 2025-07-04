@@ -21,7 +21,7 @@ const faqData = [
   },
   {
     question: "I have more questions – how can I contact you?",
-    answer: "You can reach us at nest99nest@gmail.com or message us on 012-515 6757. We’re happy to help!"
+    answer: "You can reach us at the nestspace@nestspace.my or message us on 012-515 6757. We’re happy to help!"
   },
   {
       question: "Will I get a certificate?",
