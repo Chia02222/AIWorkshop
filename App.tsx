@@ -374,7 +374,7 @@ const Footer: React.FC = () => (
             <p className="text-center text-base text-slate-500">&copy; 2024 Nestspace. All rights reserved.</p>
         </div>
     </footer>
-)
+);
 
 const App: React.FC = () => {
   const [selectedProjectId, setSelectedProjectId] = useState<string>(PROJECTS[0].id);
