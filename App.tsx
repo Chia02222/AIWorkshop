@@ -320,7 +320,7 @@ const DetailsAndRegistration: React.FC = () => {
                             <CalendarDaysIcon />
                             <div className="ml-4">
                                 <div className="font-semibold">Date</div>
-                                <div className="text-slate-300">2–3 August 2025</div>
+                                <div className="text-slate-300">2 August 2025</div>
                             </div>
                         </div>
                         <div className="flex items-center">
