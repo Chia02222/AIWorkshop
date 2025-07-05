@@ -193,7 +193,7 @@ const LearningOutcome: React.FC = () => (
             </div>
         </div>
     </div>
-）：
+);
 
 const instructorsData = [
     { name: "Lee Wei Song", role: "AI Engineer", image: "https://i.ibb.co/9HD33QR3/1.png" },
