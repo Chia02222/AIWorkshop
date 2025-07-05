@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import ProjectShowcase from './components/ProjectShowcase';
 import Agenda from './components/Agenda';
