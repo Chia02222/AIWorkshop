@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import ProjectShowcase from './components/ProjectShowcase';
-import Agenda from './components/Agenda';
 import FaqSection from './components/Faq';
 import { DAY1_AGENDA, DAY2_AGENDA, PROJECTS } from './constants';
 import { SparklesIcon, BriefcaseIcon, AcademicCapIcon, UserGroupIcon, CubeTransparentIcon, CalendarDaysIcon, ClockIcon, MapPinIcon, TicketIcon, EnvelopeIcon, PhoneIcon, LightBulbIcon, FeatureLightBulbIcon, CommunityBuildersIcon, CertificateIcon, TrophyIcon } from './components/Icons';
@@ -190,23 +189,6 @@ const LearningOutcome: React.FC = () => (
                         </div>
                     ))}
                 </div>
-            </div>
-        </div>
-    </div>
-);
-
-const AgendaSection: React.FC = () => (
-    <div id="agenda" className="py-16 sm:py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-                <h2 className="text-base font-semibold text-indigo-400 tracking-wide uppercase">Workshop Schedule</h2>
-                <p className="mt-2 text-3xl font-extrabold text-white sm:text-4xl tracking-tight">
-                    From Zero to Prototype in Two Days
-                </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <Agenda day={1} title="Building with AI" items={DAY1_AGENDA} />
-                <Agenda day={2} title="Challenge & Reflection" items={DAY2_AGENDA} />
             </div>
         </div>
     </div>
