@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import ProjectShowcase from './components/ProjectShowcase';
 import FaqSection from './components/Faq';
-import { DAY1_AGENDA, DAY2_AGENDA, PROJECTS } from './constants';
+import { PROJECTS } from './constants';
 import { SparklesIcon, BriefcaseIcon, AcademicCapIcon, UserGroupIcon, CubeTransparentIcon, CalendarDaysIcon, ClockIcon, MapPinIcon, TicketIcon, EnvelopeIcon, PhoneIcon, LightBulbIcon, FeatureLightBulbIcon, CommunityBuildersIcon, CertificateIcon, TrophyIcon } from './components/Icons';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -46,7 +45,7 @@ const AnimateOnScroll: React.FC<{ children: ReactNode; className?: string; }> = 
   );
 };
 
-const Header: React.FC<{ onAgendaClick: (e: React.MouseEvent<HTMLAnchorElement>) => void }> = ({ onAgendaClick }) => (
+const Header: React.FC = () => (
   <header className="absolute top-0 left-0 right-0 z-10 p-4">
     <div className="max-w-7xl mx-auto flex justify-between items-center">
       <div className="flex items-center">
@@ -56,9 +55,6 @@ const Header: React.FC<{ onAgendaClick: (e: React.MouseEvent<HTMLAnchorElement>)
         <span className="font-bold text-lg text-white">AI for Good</span>
       </div>
       <div className="hidden sm:flex items-center space-x-2">
-        <a href="#agenda" onClick={onAgendaClick} className="text-white font-semibold py-2 px-4 rounded-lg hover:bg-slate-800/60 transition-colors">
-          View Agenda
-        </a>
         <a href="https://eventsize.com/event/AI-Workshop" className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-500 transition-colors">
           Enroll Now
         </a>
@@ -111,7 +107,7 @@ const About: React.FC = () => (
           Solve Problems. Build Smart. Make Impact.
         </p>
         <p className="mt-4 text-xl text-slate-400 max-w-3xl mx-auto">
-          In this immersive class, you’ll learn how to harness AI to build real-world projects that matter — for your community, school, or workplace, this workshop will help you go from <span className="font-bold text-indigo-300">idea to interactive prototype</span> — using powerful <span className="font-bold text-indigo-300">no-code tools</span>.
+          In this immersive class, you'll learn how to harness AI to build real-world projects that matter — for your community, school, or workplace, this workshop will help you go from <span className="font-bold text-indigo-300">idea to interactive prototype</span> — using powerful <span className="font-bold text-indigo-300">no-code tools</span>.
         </p>
       </div>
     </div>
@@ -174,7 +170,7 @@ const LearningOutcome: React.FC = () => (
     <div className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-                 <h2 className="text-3xl font-extrabold text-white tracking-tight text-center">What You’ll Take Home</h2>
+                 <h2 className="text-3xl font-extrabold text-white tracking-tight text-center">What You'll Take Home</h2>
                  <p className="mt-4 text-xl text-slate-400 text-center">
                     Leave with tangible assets and invaluable new abilities.
                 </p>
@@ -399,7 +395,7 @@ const App: React.FC = () => {
 
   return (
     <div className="bg-slate-950">
-      <Header onAgendaClick={(e) => handleScrollTo(e, 'agenda')} />
+      <Header />
       <main>
         <Hero onExplore={handleExploreClick} />
         <div className="bg-gradient-to-b from-slate-950 via-slate-950 to-indigo-950/20">
@@ -416,7 +412,6 @@ const App: React.FC = () => {
             <AnimateOnScroll><WhoIsThisFor /></AnimateOnScroll>
             <AnimateOnScroll><LearningOutcome /></AnimateOnScroll>
         </div>
-        <AnimateOnScroll><AgendaSection /></AnimateOnScroll>
         <div className="relative isolate overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900 border-b border-slate-800 px-4 sm:px-6 lg:px-8">
             <AnimateOnScroll><Instructors /></AnimateOnScroll>
             <AnimateOnScroll><DetailsAndRegistration /></AnimateOnScroll>
