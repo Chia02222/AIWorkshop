@@ -87,7 +87,7 @@ const Hero: React.FC<{ onExplore: (e: React.MouseEvent<HTMLAnchorElement>) => vo
         Build with AI, No Coding Needed
       </p>
       <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
-        🚀 Join our 2-day hands-on workshop to turn your ideas into solutions for real-world problems in your community. Build solutions using AI – no tech skills required!
+        🚀 Join our 1-day hands-on workshop to turn your ideas into solutions for real-world problems in your community. Build solutions using AI – no tech skills required!
       </p>
       <div className="mt-10">
         <a
@@ -193,24 +193,7 @@ const LearningOutcome: React.FC = () => (
             </div>
         </div>
     </div>
-);
-
-const AgendaSection: React.FC = () => (
-    <div id="agenda" className="py-16 sm:py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-                <h2 className="text-base font-semibold text-indigo-400 tracking-wide uppercase">Workshop Schedule</h2>
-                <p className="mt-2 text-3xl font-extrabold text-white sm:text-4xl tracking-tight">
-                    From Zero to Prototype in Two Days
-                </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <Agenda day={1} title="Building with AI" items={DAY1_AGENDA} />
-                <Agenda day={2} title="Challenge & Reflection" items={DAY2_AGENDA} />
-            </div>
-        </div>
-    </div>
-);
+）：
 
 const instructorsData = [
     { name: "Lee Wei Song", role: "AI Engineer", image: "https://i.ibb.co/9HD33QR3/1.png" },
@@ -320,7 +303,7 @@ const DetailsAndRegistration: React.FC = () => {
                             <CalendarDaysIcon />
                             <div className="ml-4">
                                 <div className="font-semibold">Date</div>
-                                <div className="text-slate-300">2–3 August 2025</div>
+                                <div className="text-slate-300">2 August 2025</div>
                             </div>
                         </div>
                         <div className="flex items-center">
@@ -353,8 +336,8 @@ const DetailsAndRegistration: React.FC = () => {
                             <div className="bg-gradient-to-br from-fuchsia-500 via-purple-600 to-indigo-500 p-1 rounded-[1.25rem] shadow-lg">
                                 <div className="bg-slate-900 rounded-2xl p-8 text-center">
                                     <div className="mt-6 flex items-baseline justify-center gap-x-3">
-                                        <span className="text-6xl font-extrabold bg-gradient-to-r from-fuchsia-400 to-pink-500 text-transparent bg-clip-text">RM599</span>
-                                        <span className="text-3xl font-medium text-slate-500 line-through">RM899</span>
+                                        <span className="text-6xl font-extrabold bg-gradient-to-r from-fuchsia-400 to-pink-500 text-transparent bg-clip-text">RM199</span>
+                                        <span className="text-3xl font-medium text-slate-500 line-through">RM299</span>
                                     </div>
                                     <p className="mt-4 text-slate-400">Offer valid until July 15</p>
                                 </div>
