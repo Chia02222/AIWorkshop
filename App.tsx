@@ -346,17 +346,17 @@ const DetailsAndRegistration: React.FC = () => {
 
                         <div className="max-w-sm mx-auto relative">
                             <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
-                                <span className="bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full shadow-md">
+                                <span className="bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
                                     EARLY BIRD OFFER
                                 </span>
                             </div>
                             <div className="bg-gradient-to-br from-fuchsia-500 via-purple-600 to-indigo-500 p-1 rounded-[1.25rem] shadow-lg">
                                 <div className="bg-slate-900 rounded-2xl p-8 text-center">
                                     <div className="mt-6 flex items-baseline justify-center gap-x-3">
-                                        <span className="text-2xl sm:text-4xl font-extrabold bg-gradient-to-r from-fuchsia-400 to-pink-500 text-transparent bg-clip-text">RM599</span>
-                                        <span className="text-xl sm:text-xl font-medium text-slate-500 line-through">RM899</span>
+                                        <span className="text-4xl sm:text-4xl font-extrabold bg-gradient-to-r from-fuchsia-400 to-pink-500 text-transparent bg-clip-text">RM599</span>
+                                        <span className="text-2xl sm:text-xl font-medium text-slate-500 line-through">RM899</span>
                                     </div>
-                                    <p className="mt-4 text-slate-400">Offer valid until July 15</p>
+                                    <p className="mt-4 text-xs text-slate-400">Offer valid until July 15</p>
                                 </div>
                             </div>
                         </div>
