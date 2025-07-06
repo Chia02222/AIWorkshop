@@ -322,7 +322,7 @@ const DetailsAndRegistration: React.FC = () => {
                             <h3 className="text-3xl font-extrabold text-white sm:text-4xl tracking-tight">Pricing</h3>
                         </div>
 
-                        <div className="max-w-sm mx-auto relative">
+                        <div className="w-full max-w-sm mx-auto relative">
                             <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
                                 <span className="bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2 rounded-full shadow-md">
                                     EARLY BIRD OFFER
