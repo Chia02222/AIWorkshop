@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import ProjectShowcase from './components/ProjectShowcase';
+import Agenda from './components/Agenda';
 import FaqSection from './components/Faq';
-import { PROJECTS } from './constants';
+import { DAY1_AGENDA, DAY2_AGENDA, PROJECTS } from './constants';
 import { SparklesIcon, BriefcaseIcon, AcademicCapIcon, UserGroupIcon, CubeTransparentIcon, CalendarDaysIcon, ClockIcon, MapPinIcon, TicketIcon, EnvelopeIcon, PhoneIcon, LightBulbIcon, FeatureLightBulbIcon, CommunityBuildersIcon, CertificateIcon, TrophyIcon } from './components/Icons';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -45,7 +47,7 @@ const AnimateOnScroll: React.FC<{ children: ReactNode; className?: string; }> = 
   );
 };
 
-const Header: React.FC = () => (
+const Header: React.FC<{ onAgendaClick: (e: React.MouseEvent<HTMLAnchorElement>) => void }> = ({ onAgendaClick }) => (
   <header className="absolute top-0 left-0 right-0 z-10 p-4">
     <div className="max-w-7xl mx-auto flex justify-between items-center">
       <div className="flex items-center">
@@ -55,6 +57,9 @@ const Header: React.FC = () => (
         <span className="font-bold text-lg text-white">AI for Good</span>
       </div>
       <div className="hidden sm:flex items-center space-x-2">
+        <a href="#agenda" onClick={onAgendaClick} className="text-white font-semibold py-2 px-4 rounded-lg hover:bg-slate-800/60 transition-colors">
+          View Agenda
+        </a>
         <a href="https://eventsize.com/event/AI-Workshop" className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-500 transition-colors">
           Enroll Now
         </a>
@@ -82,7 +87,7 @@ const Hero: React.FC<{ onExplore: (e: React.MouseEvent<HTMLAnchorElement>) => vo
         Build with AI, No Coding Needed
       </p>
       <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
-        🚀 Join our hands-on workshop to turn your ideas into solutions for real-world problems in your community. Build solutions using AI – no tech skills required!
+        🚀 Join our 2-day hands-on workshop to turn your ideas into solutions for real-world problems in your community. Build solutions using AI – no tech skills required!
       </p>
       <div className="mt-10">
         <a
@@ -107,7 +112,7 @@ const About: React.FC = () => (
           Solve Problems. Build Smart. Make Impact.
         </p>
         <p className="mt-4 text-xl text-slate-400 max-w-3xl mx-auto">
-          In this immersive class, you'll learn how to harness AI to build real-world projects that matter — for your community, school, or workplace, this workshop will help you go from <span className="font-bold text-indigo-300">idea to interactive prototype</span> — using powerful <span className="font-bold text-indigo-300">no-code tools</span>.
+          In this immersive class, you’ll learn how to harness AI to build real-world projects that matter — for your community, school, or workplace, this workshop will help you go from <span className="font-bold text-indigo-300">idea to interactive prototype</span> — using powerful <span className="font-bold text-indigo-300">no-code tools</span>.
         </p>
       </div>
     </div>
@@ -170,7 +175,7 @@ const LearningOutcome: React.FC = () => (
     <div className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-                 <h2 className="text-3xl font-extrabold text-white tracking-tight text-center">What You'll Take Home</h2>
+                 <h2 className="text-3xl font-extrabold text-white tracking-tight text-center">What You’ll Take Home</h2>
                  <p className="mt-4 text-xl text-slate-400 text-center">
                     Leave with tangible assets and invaluable new abilities.
                 </p>
@@ -185,6 +190,23 @@ const LearningOutcome: React.FC = () => (
                         </div>
                     ))}
                 </div>
+            </div>
+        </div>
+    </div>
+);
+
+const AgendaSection: React.FC = () => (
+    <div id="agenda" className="py-16 sm:py-24 bg-slate-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+                <h2 className="text-base font-semibold text-indigo-400 tracking-wide uppercase">Workshop Schedule</h2>
+                <p className="mt-2 text-3xl font-extrabold text-white sm:text-4xl tracking-tight">
+                    From Zero to Prototype in Two Days
+                </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <Agenda day={1} title="Building with AI" items={DAY1_AGENDA} />
+                <Agenda day={2} title="Challenge & Reflection" items={DAY2_AGENDA} />
             </div>
         </div>
     </div>
@@ -298,14 +320,14 @@ const DetailsAndRegistration: React.FC = () => {
                             <CalendarDaysIcon />
                             <div className="ml-4">
                                 <div className="font-semibold">Date</div>
-                                <div className="text-slate-300">2 August 2025</div>
+                                <div className="text-slate-300">2–3 August 2025</div>
                             </div>
                         </div>
                         <div className="flex items-center">
                             <ClockIcon />
                             <div className="ml-4">
                                 <div className="font-semibold">Time</div>
-                                <div className="text-slate-300">10AM – 6PM</div>
+                                <div className="text-slate-300">10AM – 6PM daily</div>
                             </div>
                         </div>
                         <div className="flex items-center">
@@ -322,19 +344,19 @@ const DetailsAndRegistration: React.FC = () => {
                             <h3 className="text-3xl font-extrabold text-white sm:text-4xl tracking-tight">Pricing</h3>
                         </div>
 
-                        <div className="w-full max-w-sm mx-auto relative">
+                        <div className="max-w-sm mx-auto relative">
                             <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
-                                <span className="bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3 py1.5 sm:px-5 sm:py-2 rounded-full shadow-md">
+                                <span className="bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2 rounded-full shadow-md">
                                     EARLY BIRD OFFER
                                 </span>
                             </div>
                             <div className="bg-gradient-to-br from-fuchsia-500 via-purple-600 to-indigo-500 p-1 rounded-[1.25rem] shadow-lg">
-                                <div className="bg-slate-900 rounded-2xl p-4 sm:p-8 text-center">
-                                    <div className="mt-4 flex items-baseline justify-center gap-x-2  sm:gap-x-3">
-                                        <span className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-fuchsia-400 to-pink-500 text-transparent bg-clip-text">RM199</span>
-                                        <span className="text-xl sm:text-xl font-medium text-slate-500 line-through">RM299</span>
+                                <div className="bg-slate-900 rounded-2xl p-8 text-center">
+                                    <div className="mt-6 flex items-baseline justify-center gap-x-3">
+                                        <span className="text-6xl font-extrabold bg-gradient-to-r from-fuchsia-400 to-pink-500 text-transparent bg-clip-text">RM599</span>
+                                        <span className="text-3xl font-medium text-slate-500 line-through">RM899</span>
                                     </div>
-                                    <p className="mt-2 text-sm sm:mt-4 text-slate-400">Offer valid until July 15</p>
+                                    <p className="mt-4 text-slate-400">Offer valid until July 15</p>
                                 </div>
                             </div>
                         </div>
@@ -395,7 +417,7 @@ const App: React.FC = () => {
 
   return (
     <div className="bg-slate-950">
-      <Header />
+      <Header onAgendaClick={(e) => handleScrollTo(e, 'agenda')} />
       <main>
         <Hero onExplore={handleExploreClick} />
         <div className="bg-gradient-to-b from-slate-950 via-slate-950 to-indigo-950/20">
@@ -412,6 +434,7 @@ const App: React.FC = () => {
             <AnimateOnScroll><WhoIsThisFor /></AnimateOnScroll>
             <AnimateOnScroll><LearningOutcome /></AnimateOnScroll>
         </div>
+        <AnimateOnScroll><AgendaSection /></AnimateOnScroll>
         <div className="relative isolate overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900 border-b border-slate-800 px-4 sm:px-6 lg:px-8">
             <AnimateOnScroll><Instructors /></AnimateOnScroll>
             <AnimateOnScroll><DetailsAndRegistration /></AnimateOnScroll>
