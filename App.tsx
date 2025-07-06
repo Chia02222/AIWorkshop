@@ -346,7 +346,7 @@ const DetailsAndRegistration: React.FC = () => {
 
                         <div className="max-w-sm mx-auto relative">
                             <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
-                                <span className="bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2 rounded-full shadow-md">
+                                <span className="bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full shadow-md">
                                     EARLY BIRD OFFER
                                 </span>
                             </div>
