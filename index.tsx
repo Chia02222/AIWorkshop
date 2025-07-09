@@ -8,7 +8,12 @@ const options = {
   autoConfig: true, // set pixel's autoConfig
   debug: false, // enable logs
 };
-ReactPixel.init('1281008766590827', undefined, options);
+const pixelId = import.meta.env.VITE_META_PIXEL_ID;
+if (pixelId) {
+    ReactPixel.init(pixelId, undefined, options);
+} else {
+    console.error("Meta Pixel ID not found in environment variables.");
+}
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
