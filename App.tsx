@@ -73,7 +73,8 @@ const AnimateOnScroll: React.FC<{
 
 const Header: React.FC<{
     onAgendaClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-}> = ({ onAgendaClick }) => (
+    onEnrollClick: () => void;
+}> = ({ onAgendaClick, onEnrollClick }) => (
     <header className="absolute top-0 left-0 right-0 z-10 p-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
             <div className="flex items-center">
@@ -94,6 +95,7 @@ const Header: React.FC<{
                 </a>
                 <a
                     href="https://eventsize.com/event/AI-Workshop"
+                    onClick={onEnrollClick}
                     className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-500 transition-colors"
                 >
                     Enroll Now
@@ -446,7 +448,9 @@ const Instructors: React.FC = () => (
     </div>
 );
 
-const DetailsAndRegistration: React.FC = () => {
+const DetailsAndRegistration: React.FC<{ onEnrollClick: () => void }> = ({
+    onEnrollClick,
+}) => {
     return (
         <div id="register" className="py-16 sm:py-24">
             <div className="relative max-w-4xl mx-auto">
@@ -521,6 +525,7 @@ const DetailsAndRegistration: React.FC = () => {
                         <div className="mt-12 text-center">
                             <a
                                 href="https://eventsize.com/event/AI-Workshop"
+                                onClick={onEnrollClick}
                                 className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 px-16 rounded-lg transition-all shadow-lg hover:shadow-2xl shadow-indigo-500/40 transform hover:scale-105 text-lg"
                             >
                                 Enroll Now
@@ -586,9 +591,17 @@ const App: React.FC = () => {
         setSelectedProjectId("imp");
     };
 
+    const handleEnrollClick = () => {
+        ReactPixel.track("Lead");
+        console.log("Lead event tracked");
+    };
+
     return (
         <div className="bg-slate-950">
-            <Header onAgendaClick={(e) => handleScrollTo(e, "agenda")} />
+            <Header
+                onAgendaClick={(e) => handleScrollTo(e, "agenda")}
+                onEnrollClick={handleEnrollClick}
+            />
             <main>
                 <Hero onExplore={handleExploreClick} />
                 <div className="bg-gradient-to-b from-slate-950 via-slate-950 to-indigo-950/20">
@@ -619,7 +632,9 @@ const App: React.FC = () => {
                         <Instructors />
                     </AnimateOnScroll>
                     <AnimateOnScroll>
-                        <DetailsAndRegistration />
+                        <DetailsAndRegistration
+                            onEnrollClick={handleEnrollClick}
+                        />
                     </AnimateOnScroll>
                 </div>
                 <AnimateOnScroll>
